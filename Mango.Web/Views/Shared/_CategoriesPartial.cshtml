@@ -1,0 +1,6 @@
+﻿@model ProductDto
+@*<select id="Categories" class="form-control" asp-for="@Model.CategoryId" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"))">
+        <option value="">--Select--</option>
+    </select>*@
+@Html.DropDownListFor(c => c.CategoryId, new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"), "Select Category", new { @class = "form-control", @style = "width: 220px" })
+
